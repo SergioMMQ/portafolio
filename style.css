@@ -4,14 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
-    color: #333;
 }
 
 /* Navegación */
 nav {
     background-color: #333;
     color: #fff;
-    padding: .5rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -19,13 +17,13 @@ nav {
 }
 
 nav ul {
-    display: flex;
     justify-content: center;
+    display: flex;
     list-style: none;
 }
 
 nav ul li {
-    margin: 0 .5rem;
+    margin: 0 .01rem;
 }
 
 nav ul li a {
@@ -38,6 +36,16 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #007BFF;
+    border-radius: 5px;
+}
+
+#ultimo {
+    background: #00BFFF;
+    border-radius: 50px;
+}
+
+#ultimo:hover {
+    background: #00BFFF;
     border-radius: 5px;
 }
 
@@ -75,18 +83,24 @@ nav ul li a:hover {
     max-width: 800px;
 }
 
-/* .hero .btn {
-    background-color: #fff;
-    color: #007BFF;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+.btn-2 {
+    
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    background-color: #007BFF;
+    border-radius: 5px;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-}
-
-.hero .btn:hover {
-    background-color: #f7f7f7;
-} */
+    transition: background-color 0.3s;
+  }
+  .btn-2:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+    transform: scale(1.1);
+  }
 
 /* From Uiverse.io by catraco */ 
 .btn {
@@ -151,6 +165,9 @@ nav ul li a:hover {
     filter: brightness(1.4);
   }
 
+  .btn div a {
+    text-decoration: none;
+  }
 
 /* Sección de Proyectos */
 #proyectos {
@@ -173,17 +190,32 @@ nav ul li a:hover {
 
 .tarjeta {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 40px 40px 10px 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 300px;
     text-align: center;
 }
 
+.tarjeta h3{
+    text-transform: uppercase; 
+}
+
 .tarjeta img {
-    width: 100%;
+    width: 300px;
     height: 200px;
     object-fit: cover;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.tarjeta img:hover{
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+.tarjeta:hover{
+    border-radius: 10px 10px 10px 10px;
+
 }
 
 .contenido-tarjeta {
@@ -193,12 +225,14 @@ nav ul li a:hover {
 .contenido-tarjeta h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    
 }
 
 .contenido-tarjeta p {
     font-size: 1rem;
     margin-bottom: 1rem;
     color: #666;
+    display: none;
 }
 
 .contenido-tarjeta a.btn {
@@ -313,6 +347,7 @@ nav ul li a:hover {
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 .testimonio span {
@@ -337,25 +372,6 @@ nav ul li a:hover {
 .testimonio a:hover {
     color: #007BFF;
     border-radius: 5px;
-}
-
-/* Sección de Contacto */
-#contacto {
-    padding: 5rem 0;
-    background-color: #f7f7f7;
-    text-align: center;
-}
-
-#contacto h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 }
 
 form input, form textarea {
@@ -413,12 +429,17 @@ footer p {
 
 .contacto {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     padding: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+.contacto div{
+    text-align: center;
+    padding: 1%;
+}
+
 
 .icono {
     display: flex;
@@ -430,13 +451,9 @@ footer p {
 }
 
 .social-icon {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    width: 100%;
-    color: #000; /* Cambia el color según tu diseño */
+    display: grid;
+    color: #000;
     text-decoration: none;
-    font-size: 16px;
 }
 
 .social-icon i {
@@ -448,9 +465,22 @@ footer p {
     color: #007bff; /* Color al pasar el cursor, puedes cambiarlo */
 }
 
-
+@media (max-width: 900px) {
+    nav ul li a{
+        padding: 0.5rem 0.5rem;
+    }
+    .testimonio p{
+        
+        font-size: small;
+    }
+    .sobre-mi-texto p{
+        
+        font-size: small;
+    }
+}
 
 @media (max-width: 768px) {
+
     nav {
         padding: 0rem;
     }
@@ -468,7 +498,7 @@ footer p {
         margin: .5rem 1.5rem;
     }
     nav ul li a {
-        padding: 0.5rem;
+        padding: 0.3rem;
     }
     .container{
 

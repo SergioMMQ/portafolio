@@ -1,0 +1,112 @@
+/* Variables de colores para fácil ajuste */
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: #c49d64;
+    --text-color: #fff;
+    --background-color: #f9f9f9;
+    --hover-color: #305d73;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 1.5rem 0;
+}
+
+header h1 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
+    width: 70%;
+    max-width: 400px;
+    border-radius: 30px 10px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    padding: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+section.contacto {
+    padding: 0 0 100px 0;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.contacto h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+
+.icono {
+    margin: 0.7rem 0;
+}
+
+.social-icon {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    display: inline-block;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.social-icon i {
+    font-size: 1.4rem;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
