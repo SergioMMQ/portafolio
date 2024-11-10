@@ -95,12 +95,12 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-  }
-  .btn-2:hover {
+}
+.btn-2:hover {
     cursor: pointer;
     filter: brightness(1.2);
     transform: scale(1.1);
-  }
+}
 
 /* From Uiverse.io by catraco */ 
 .btn {
@@ -112,18 +112,18 @@ nav ul li a:hover {
     transition: all .5s;
     border: none;
     background-color: transparent;
-  }
+}
   
-  .btn div {
+.btn div {
     letter-spacing: 2px;
     font-weight: bold;
     background: var(--color);
     border-radius: 2rem;
     color: black;
     padding: 1rem;
-  }
+}
   
-  .btn::before {
+.btn::before {
     content: '';
     z-index: -1;
     background-color: var(--color);
@@ -135,39 +135,39 @@ nav ul li a:hover {
     transform: rotate(10deg);
     transition: .5s;
     opacity: 0.2;
-  }
+}
   
-  .btn:hover {
+.btn:hover {
     cursor: pointer;
     filter: brightness(1.2);
     transform: scale(1.1);
-  }
+}
   
-  .btn:hover::before {
+.btn:hover::before {
     transform: rotate(0deg);
     opacity: 1;
-  }
+}
   
-  .btn svg {
+.btn svg {
     transform: translateX(-200%);
     transition: .5s;
     width: 0;
     opacity: 0;
-  }
+}
   
-  .btn:hover svg {
+.btn:hover svg {
     width: 25px;
     transform: translateX(0%);
     opacity: 1;
-  }
+}
   
-  .btn:active {
+.btn:active {
     filter: brightness(1.4);
-  }
+}
 
-  .btn div a {
+.btn div a {
     text-decoration: none;
-  }
+}
 
 /* Sección de Proyectos */
 #proyectos {
@@ -466,6 +466,7 @@ footer p {
 }
 
 @media (max-width: 900px) {
+    
     nav ul li a{
         padding: 0.5rem 0.5rem;
     }
