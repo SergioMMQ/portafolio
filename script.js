@@ -21,3 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
         appearOnScroll.observe(fader);
     });
 });
+
+// Función para mostrar/ocultar el menú
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("hidden");
+}
