@@ -489,6 +489,17 @@ footer p {
 
 @media (max-width: 820px) {
 
+    .btn svg{
+        border: 0;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+
+    .btn::before{
+        display: none;
+    }
+
     .menu-icon{
         display: block;
     }
