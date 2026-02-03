@@ -12,7 +12,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Trabajo</title>
+    <title>SMM Portafolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -26,35 +26,70 @@
             &#9776; <!-- Este es el icono de hamburguesa -->
         </div>
         <ul id="menu" class="menu hidden">
+            <a href="/" class="portfolio-title">MI PORTAFOLIO</a>
             <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#proyectos">PROYECTOS</a></li>
             <li><a href="#sobre-mi">SOBRE MI</a></li>
+            <li><a href="#proyectos">PROYECTOS</a></li>
             <li><a href="#testimonios">TESTIMONIOS</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
             <li><a href="https://sergiommq.github.io/certificados/" target="_blank">CERTIFICADOS</a></li>
-            <li><a href="https://drive.google.com/file/d/1TGNW_20NVsL_9C2Ppe_psuTdxpZEsDPt/view?usp=sharing" id="ultimo">CV PDF</a></li>
+            <li style="margin-right: auto;"><a href="https://drive.google.com/file/d/1TGNW_20NVsL_9C2Ppe_psuTdxpZEsDPt/view?usp=sharing" id="ultimo">CV PDF</a></li>
         </ul>
     </nav>
 
 
-    <section id="inicio" class="hero fade-in">
-        <div class="container">
-            <h1>BIENVENIDO A MI PORTAFOLIO</h1>
-            <p>Me alegra que estés aquí. Este espacio refleja mi pasión por el desarrollo de software, mi experiencia en proyectos y las habilidades que he cultivado a lo largo de los años. Explora mis trabajos, conoce más sobre mí y si tienes alguna pregunta o quieres colaborar, ¡no dudes en contactarme!</p>
-            <button class="btn">
-                <div><a href="#proyectos">Descubre mis Proyectos</a></div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none">
-                    <path d="M11.6801 14.62L14.2401 12.06L11.6801 9.5" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M4 12.0601H14.17" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-            </button>
+    <section id="inicio">
+        <div class="inicio-container">
+            <div class="inicio-texto">
+                <h1>Desarrollador <span class="gradient-text">Full Stack</span></h1>
+                <p>Impulso negocios a través de tecnología, automatización y experiencias digitales bien pensadas. Desarrollo soluciones web modernas, escalables y orientadas a datos, enfocadas en crecer, optimizar procesos y generar resultados reales.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            Ver proyectos   
+                        </a>
+                        
+                        <a href="#contact" class="btn btn-outline">
+                            Contactarme 
+                        </a>
+
+                        <button class="btn btn-secondary" onclick="downloadCV()">
+                            Descargar CV
+                        </button>
+                    </div>
+            </div>
+            <img src="imagenes/sergio.jpg" alt="Foto personal" class="foto-perfil">
         </div>
     </section>
 
+    <section class="sobre-mi" id="sobre-mi">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre mí</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid">
+                <div>
+                    <h3>Desarrollador apasionado por crear soluciones digitales impactantes</h3>
+                    
+                    <p>
+                        Soy un desarrollador full stack con más de 5 años de experiencia en la creación de aplicaciones web y móviles. Mi pasión es transformar ideas innovadoras en productos digitales funcionales y escalables que generen valor real para los usuarios y las empresas.
+                    </p>
+
+                    <p>
+                        Me especializo en tecnologías modernas como React, Node.js, TypeScript y bases de datos tanto SQL como NoSQL. Mi enfoque se centra en escribir código limpio, mantenible y en seguir las mejores prácticas de desarrollo.
+                    </p>
+
+                    <p>
+                        A lo largo de mi carrera, he trabajado con startups y empresas establecidas, liderando proyectos desde la conceptualización hasta el despliegue. Me apasiona el aprendizaje continuo y mantenerme actualizado con las últimas tendencias tecnológicas.
+                    </p>
+
+                </div>
+</section>  
+
     <section id="proyectos" class="fade-in">
-        <h2>MIS PROYECTOS</h2>
-        <h3 style="border: 1px black solid;">PAGINAS WEB</h3>
+        <h2>PROYECTOS DESTACADOS</h2>
+        <!-- <h3 style="border: 1px black solid;">PAGINAS WEB</h3> -->
         <div class="tarjetas">
             <div >
                 <div>
@@ -111,7 +146,7 @@
 
         </div>
 
-        <h3 style="border: 1px black solid;">APLICACIONES ODOO</h3>
+        <!-- <h3 style="border: 1px black solid;">APLICACIONES ODOO</h3> -->
         <div class="tarjetas">
             <div>
                 <div>
@@ -142,9 +177,9 @@
 
         </div>
         
-        <h3 style="border: 1px black solid;">OTROS</h3>
+        <!-- <h3 style="border: 1px black solid;">OTROS</h3> -->
         <div class="tarjetas">
-            <div>
+            <!-- <div>
                 <div>
                     <h3>CORAZON PALPITANDO</h3>
                 </div>
@@ -155,7 +190,7 @@
                         <a href="https://sergiommq.github.io/corazon/" target="_blank" class="btn-2">Ver Página</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div>
                 <div>
                     <h3>JUEGO DEL NUMERO SECRETO</h3>
@@ -201,16 +236,9 @@
         </div>
     </section>
 
-    <section id="sobre-mi" class="fade-in">
-        <h2>SOBRE MI</h2>
-        <div class="sobre-mi-container">
-            <img src="imagenes/yo.jpeg" alt="Foto personal" class="foto-perfil">
-            <div class="sobre-mi-texto">
-                <p>Soy un apasionado desarrollador de software con experiencia en desarrollo web, manejo de erp y soluciones empresariales. Me gusta aprender nuevas tecnologías y aplicar metodologías ágiles para entregar proyectos eficientes y de alta calidad.</p>
-                <p>Fuera del trabajo, disfruto colaborar en proyectos de código abierto y participar en actividades como hacer deporte, escuchar musica y jugar con mis amigos en linea.</p>
-            </div>
-        </div>
-    </section>
+
+
+
 
     <section id="testimonios" class="fade-in"> 
         <h2>TESTIMONIOS</h2>
