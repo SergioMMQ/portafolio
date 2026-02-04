@@ -63,3 +63,36 @@ function downloadCV() {
     link.click();
     document.body.removeChild(link);
 }
+
+// =========================
+// Formulario de contacto (validación simple)
+// =========================
+const form = document.getElementById('contactForm');
+  const successMsg = document.getElementById('successMsg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    successMsg.textContent = '';
+
+    try {
+      const formData = new FormData(form);
+
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        successMsg.textContent = '✅ ¡Gracias! Tu mensaje fue enviado correctamente.';
+        successMsg.style.color = '#0f766e';
+        form.reset();
+      } else {
+        successMsg.textContent = '⚠️ No se pudo enviar. Intenta de nuevo.';
+        successMsg.style.color = '#dc2626';
+      }
+    } catch (err) {
+      successMsg.textContent = '⚠️ Error de conexión. Revisa tu internet e intenta otra vez.';
+      successMsg.style.color = '#dc2626';
+    }
+  });
