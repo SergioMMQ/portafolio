@@ -34,3 +34,21 @@ function toggleMenu() {
     var menu = document.getElementById("menu");
     menu.classList.toggle("hidden");
 }
+// =========================
+// Testimonios (hover text change)
+// =========================
+const imagenes = document.querySelectorAll('.testimonio-imagen');
+    const nombre = document.querySelector('.globo-nombre');
+    const mensaje = document.querySelector('.globo-mensaje');
+
+    imagenes.forEach(img => {
+        img.addEventListener('mouseenter', () => {
+            nombre.textContent = img.dataset.nombre;
+            mensaje.textContent = img.dataset.texto;
+        });
+
+        img.addEventListener('mouseleave', () => {
+            nombre.textContent = '...';
+            mensaje.textContent = '';
+        });
+    });

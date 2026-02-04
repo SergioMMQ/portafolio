@@ -121,14 +121,14 @@ nav ul li a:hover {
 .btn-2 {
     display: inline-block;
     margin: 0.5rem;
-    padding: 0.7rem 1.5rem;
+    padding: 0.3rem 1rem;
     text-decoration: none;
     background-color: #007BFF;
     border-radius: 5px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color .5s;
 }
 
 .btn-2:hover {
@@ -158,25 +158,25 @@ h2 {
     text-align: center;
 }
 
-#proyectos h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-}
-
 .tarjetas {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
     flex-wrap: wrap;
 }
 
 .tarjeta {
     background-color: #fff;
-    border-radius: 40px 40px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 300px;
     text-align: center;
+}
+
+.tarjeta:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 10px 10px;
 }
 
 .tarjeta h3{
@@ -188,31 +188,28 @@ h2 {
     height: 200px;
     object-fit: cover;
     border-radius: 10px 10px 10px 10px;
+    object-position: top;
+    transition: box-shadow 0.3s, border-radius 0.3s;
 }
 
-.tarjeta img:hover{
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0 6px 25px gray;
-}
 
 .tarjeta:hover{
     border-radius: 10px 10px 10px 10px;
 }
 
-.contenido-tarjeta {
+/* .contenido-tarjeta {
     padding: 1.5rem;
-}
+} */
 
 .contenido-tarjeta h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
 .contenido-tarjeta p {
     font-size: 1rem;
-    margin-bottom: 1rem;
     color: #666;
-    display: none;
+    padding: 10px 30px;
 }
 
 .contenido-tarjeta a.btn {
@@ -247,7 +244,7 @@ h2 {
 .habilidades-container {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
@@ -365,18 +362,19 @@ h2 {
             grid-template-columns: 1fr;
             gap: 3rem;
             align-items: center;
+                padding: 0px 15%;
         }
 
-        .sobre-mi h3 {
+        /* .sobre-mi h3 {
             font-size: 2rem;
             font-weight: bold;
             margin-bottom: 1.5rem;
-        }
-
+        } */
+/* 
         .sobre-mi p {
             color: var(--gray-600);
             margin-bottom: 1rem;
-        }
+        } */
 
         .sobre-mi .info-badges {
             display: flex;
@@ -428,10 +426,6 @@ h2 {
     text-align: center;
 }
 
-#testimonios h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-}
 
 .testimonios-container {
     display: flex;
@@ -450,7 +444,7 @@ h2 {
 }
 
 .testimonio p {
-    font-size: 1.1rem;
+    font-size: .8rem;
     color: #666;
     margin-bottom: 1rem;
     text-align: justify;
@@ -567,15 +561,17 @@ h2 {
    9) Formulario
 ========================= */
 form input, form textarea {
-    padding: 1rem;
-    margin-bottom: 1rem;
+    /* padding: 1rem; */
+    /* margin-bottom: 1rem; */
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
 form textarea {
-    min-height: 150px;
+    height: 10px;
+    
+    resize: vertical;
 }
 
 form .btn {
@@ -795,4 +791,40 @@ footer p {
     .menu li a:hover {
         background-color: #575757;
     }
+}
+
+
+.fila-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.testimonio-imagen {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonio-imagen:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.globo-texto {
+    max-width: 800px;
+    margin: 25px auto 0px;
+    padding: 20px 25px;
+    background: #f5f5f5;
+    border-radius: 15px;
+    text-align: center;
+    font-style: italic;
+    min-height: 80px;
+    height: auto;
+    line-height: 1.6;
 }
