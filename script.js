@@ -52,3 +52,14 @@ const imagenes = document.querySelectorAll('.testimonio-imagen');
             mensaje.textContent = '';
         });
     });
+// =========================
+// Descargar CV
+// =========================
+function downloadCV() {
+    const link = document.createElement("a");
+    link.href = "cv/Sergio-Martinez-CV.pdf"; // ruta a tu CV
+    link.download = "Sergio-Martinez-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
