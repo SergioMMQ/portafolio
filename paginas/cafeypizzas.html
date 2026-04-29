@@ -1,62 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzas y Crepas</title> <!--agregar titulo-->
+    <title>Café y Pizzas — SMM Portafolio</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="stylepaginas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../imagenes/yo.jpeg" type="image/jpeg">
 </head>
 <body>
-    
-    
-    <header>
-        <h1>Pizzas y Crepas</h1><!--agregar titulo-->      
-    </header>
-    <main>
-        <div class="main-content">
-            <img src="../imagenes/cefeypizzas.png" alt="Imagen FASE LUNAR" class="main-image"><!--agregar imagen-->
-            <!--descripcion-->
-            <p class="description">
 
-                Esta página web fue desarrollada para un negocio local que buscaba incrementar sus ventas y mejorar su presencia digital. Mi objetivo principal fue diseñar una plataforma funcional que permitiera al negocio mostrar su menú de manera clara y sencilla, mientras facilitaba la comunicación con sus clientes a través de WhatsApp.
-                <br><br>
-                Principales características:
-                <br>
-                * Diseño centrado en el usuario: Una interfaz intuitiva que guía al cliente a encontrar rápidamente lo que busca. <br>
-                * Sección de menú interactivo: Presenta los productos del negocio de forma atractiva, permitiendo a los usuarios explorar fácilmente las opciones disponibles. <br>
-                * Integración con WhatsApp: Un botón directo para que los clientes puedan realizar pedidos o consultas de manera rápida y eficiente. <br>
-                * Ubicación con Google Maps: Facilita que los clientes encuentren el local sin complicaciones. <br>
-                * Promociones destacadas: Espacio dedicado para captar la atención de los clientes con ofertas especiales. <br>
-                * Apartado de otras ventas: Una sección adicional para exhibir productos complementarios, como joyería, ampliando las oportunidades del negocio. <br>
-            </p>
+    <nav aria-label="Navegación principal">
+        <a href="../index.html" class="portfolio-title">MI PORTAFOLIO</a>
+        <ul id="menu" class="menu hidden">
+            <li><a href="../index.html#inicio">INICIO</a></li>
+            <li><a href="../index.html#proyectos">PROYECTOS</a></li>
+            <li><a href="../index.html#sobre-mi">SOBRE MI</a></li>
+            <li><a href="../index.html#habilidades">HABILIDADES</a></li>
+            <li><a href="../index.html#experiencia">EXPERIENCIA</a></li>
+            <li><a href="../index.html#testimonios">TESTIMONIOS</a></li>
+            <li><a href="../index.html#contacto">CONTACTO</a></li>
+            <li><a href="https://sergiommq.github.io/certificados/" target="_blank" rel="noopener">CERTIFICADOS</a></li>
+            <li><a href="https://drive.google.com/file/d/1TGNW_20NVsL_9C2Ppe_psuTdxpZEsDPt/view?usp=sharing" id="ultimo" target="_blank" rel="noopener">CV PDF</a></li>
+        </ul>
+        <button class="menu-icon" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    </nav>
+
+    <section class="proyecto-hero">
+        <div class="proyecto-hero-inner">
+            <div class="proyecto-breadcrumb">
+                <a href="../index.html#proyectos" class="btn-back">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a proyectos
+                </a>
+                <span class="breadcrumb-sep">/</span>
+                <span class="tarjeta-tag tag--web">Sitio Web</span>
+            </div>
+            <h1>Café y Pizzas</h1>
+            <p>Sitio web para negocio local de alimentos con menú interactivo, integración con WhatsApp para pedidos y ubicación en Google Maps.</p>
+            <div class="proyecto-cta">
+                <a href="https://sergiommq.github.io/paginawebpizza/" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Ver sitio en vivo
+                </a>
+            </div>
         </div>
-    </main>
-
-
-    <h2>Contacto</h2>
-    <section class="contacto">
-        <div>
-            <a href="https://wa.me/525550538743?text=Me%20comunico%20con%20usted%20con%20el%20motivo%20de" target="_blank" class="social-icon">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-            <a href="mailto:quetzal.mq97@gmail.com" target="_blank" class="social-icon">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/sergio-mart%C3%ADnez-8500961b4/" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
-                        <!-- <a href="https://github.com/SergioMMQ" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a> -->
-            <a href="https://www.google.com/maps/place/Ciudad+de+M%C3%A9xico,+CDMX" target="_blank" class="social-icon">
-                <i class="fas fa-map-marker-alt"></i>
-            </a>
     </section>
-    
+
+    <section class="proyecto-body">
+        <div class="proyecto-body-inner">
+            <img src="../imagenes/cefeypizzas.png" alt="Captura del sitio Café y Pizzas" class="proyecto-img">
+            <div class="proyecto-info">
+                <h2>Sobre el proyecto</h2>
+                <p>Café y Pizzas es un sitio web desarrollado para un negocio local de alimentos que buscaba incrementar sus ventas y mejorar su presencia digital. El objetivo fue crear una plataforma funcional que presentara el menú de forma clara y facilitara el contacto con clientes.</p>
+                <p>El sitio cuenta con menú interactivo de productos, integración directa con WhatsApp para pedidos, ubicación con Google Maps y un espacio para promociones y ofertas especiales. También incluye una sección de productos adicionales como joyería.</p>
+                <p>Diseñado con enfoque en usabilidad y conversión, el proyecto demuestra la capacidad de construir sitios funcionales para negocios locales con necesidades específicas.</p>
+                <p class="proyecto-tech-label">Tecnologías usadas</p>
+                <div class="tech-tags">
+                    <span class="habilidad">HTML</span>
+                    <span class="habilidad">CSS</span>
+                    <span class="habilidad">JavaScript</span>
+                    <span class="habilidad">Diseño responsivo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Fase Lunar - Todos los derechos reservados</p>
+        <p>&copy; 2025 SMM Portafolio — Todos los derechos reservados</p>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

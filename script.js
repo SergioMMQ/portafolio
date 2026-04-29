@@ -22,22 +22,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // =========================
-    // Certificaciones (render + Swiper)
+    // Cerrar menú móvil al hacer click en un enlace
     // =========================
-    loadCertifications();
-});
+    document.querySelectorAll('#menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            const btn = document.querySelector('.menu-icon');
+            if (window.innerWidth <= 820 && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
 
-// =========================
-// Menú móvil
-// =========================
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    menu.classList.toggle("hidden");
-}
-// =========================
-// Testimonios (hover text change)
-// =========================
-const imagenes = document.querySelectorAll('.testimonio-imagen');
+    // =========================
+    // Testimonios (hover text change)
+    // =========================
+    const imagenes = document.querySelectorAll('.testimonio-imagen');
     const nombre = document.querySelector('.globo-nombre');
     const mensaje = document.querySelector('.globo-mensaje');
 
@@ -52,47 +53,67 @@ const imagenes = document.querySelectorAll('.testimonio-imagen');
             mensaje.textContent = '';
         });
     });
+
+    // =========================
+    // Formulario de contacto
+    // =========================
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        successMsg.textContent = '';
+
+        const submitBtn = form.querySelector('.btn-enviar');
+        const originalHTML = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Enviando...</span>';
+
+        try {
+            const formData = new FormData(form);
+
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+                successMsg.textContent = '✅ ¡Gracias! Tu mensaje fue enviado correctamente.';
+                successMsg.style.color = '#0f766e';
+                form.reset();
+            } else {
+                successMsg.textContent = '⚠️ No se pudo enviar. Intenta de nuevo.';
+                successMsg.style.color = '#dc2626';
+            }
+        } catch (err) {
+            successMsg.textContent = '⚠️ Error de conexión. Revisa tu internet e intenta otra vez.';
+            successMsg.style.color = '#dc2626';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalHTML;
+        }
+    });
+});
+
+// =========================
+// Menú móvil
+// =========================
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const btn = document.querySelector(".menu-icon");
+    const isHidden = menu.classList.toggle("hidden");
+    btn.setAttribute("aria-expanded", String(!isHidden));
+}
+
 // =========================
 // Descargar CV
 // =========================
 function downloadCV() {
     const link = document.createElement("a");
-    link.href = "cv/Sergio-Martinez-CV.pdf"; // ruta a tu CV
+    link.href = "cv/Sergio-Martinez-CV.pdf";
     link.download = "Sergio-Martinez-CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 }
-
-// =========================
-// Formulario de contacto (validación simple)
-// =========================
-const form = document.getElementById('contactForm');
-  const successMsg = document.getElementById('successMsg');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    successMsg.textContent = '';
-
-    try {
-      const formData = new FormData(form);
-
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        successMsg.textContent = '✅ ¡Gracias! Tu mensaje fue enviado correctamente.';
-        successMsg.style.color = '#0f766e';
-        form.reset();
-      } else {
-        successMsg.textContent = '⚠️ No se pudo enviar. Intenta de nuevo.';
-        successMsg.style.color = '#dc2626';
-      }
-    } catch (err) {
-      successMsg.textContent = '⚠️ Error de conexión. Revisa tu internet e intenta otra vez.';
-      successMsg.style.color = '#dc2626';
-    }
-  });

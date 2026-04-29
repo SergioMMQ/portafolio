@@ -1,67 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Los Pasos de Luna | Tienda de Zapatos</title>
-  <link rel="stylesheet" href="stylepaginas.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Pasos de Luna — SMM Portafolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="stylepaginas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../imagenes/yo.jpeg" type="image/jpeg">
 </head>
-
 <body>
-  <header>
-    <h1>LOS PASOS DE LUNA</h1>
-  </header>
 
-  <main>
-    <div class="main-content">
-      <!-- Sugerencia: usa una imagen representativa del sitio (logo/hero) -->
-      <img src="../imagenes/lospasosdeluna.png" alt="Los Pasos de Luna - Tienda de zapatos" class="main-image" />
+    <nav aria-label="Navegación principal">
+        <a href="../index.html" class="portfolio-title">MI PORTAFOLIO</a>
+        <ul id="menu" class="menu hidden">
+            <li><a href="../index.html#inicio">INICIO</a></li>
+            <li><a href="../index.html#proyectos">PROYECTOS</a></li>
+            <li><a href="../index.html#sobre-mi">SOBRE MI</a></li>
+            <li><a href="../index.html#habilidades">HABILIDADES</a></li>
+            <li><a href="../index.html#experiencia">EXPERIENCIA</a></li>
+            <li><a href="../index.html#testimonios">TESTIMONIOS</a></li>
+            <li><a href="../index.html#contacto">CONTACTO</a></li>
+            <li><a href="https://sergiommq.github.io/certificados/" target="_blank" rel="noopener">CERTIFICADOS</a></li>
+            <li><a href="https://drive.google.com/file/d/1TGNW_20NVsL_9C2Ppe_psuTdxpZEsDPt/view?usp=sharing" id="ultimo" target="_blank" rel="noopener">CV PDF</a></li>
+        </ul>
+        <button class="menu-icon" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    </nav>
 
-      <p class="description">
-        Los Pasos de Luna es una tienda en línea con una colección de zapatos y tallas disponibles en centímetros,
-        donde puedes filtrar por talla mínima y máxima para encontrar tu mejor ajuste. Cuenta con ofertas exclusivas
-        y descuentos especiales en la colección, además de aceptar pagos con tarjeta. También se anuncia una promoción
-        especial: obtén descuento al pagar en efectivo y en una sola exhibición.
-      </p>
-      <!-- Contenido basado en la página zapatos.html -->
-      <!-- Ofertas, pagos con tarjeta, filtros por tallas y promo de efectivo. -->
-      <!-- Fuente: https://www.faselunar.com.mx/zapatos.html -->
-    </div>
-  </main>
+    <section class="proyecto-hero">
+        <div class="proyecto-hero-inner">
+            <div class="proyecto-breadcrumb">
+                <a href="../index.html#proyectos" class="btn-back">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a proyectos
+                </a>
+                <span class="breadcrumb-sep">/</span>
+                <span class="tarjeta-tag tag--web">Sitio Web</span>
+            </div>
+            <h1>Los Pasos de Luna</h1>
+            <p>Tienda en línea de zapatos de cuero y accesorios para eventos y fotografía. Filtros por talla, promociones y pago con tarjeta o efectivo.</p>
+            <div class="proyecto-cta">
+                <a href="https://www.faselunar.com.mx/zapatos.html" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Ver sitio en vivo
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <h2>Contacto</h2>
-  <section class="contacto">
-    <div>
-      <a href="https://wa.me/525550538743?text=Me%20comunico%20con%20usted%20con%20el%20motivo%20de"
-         target="_blank" class="social-icon" rel="noopener">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
+    <section class="proyecto-body">
+        <div class="proyecto-body-inner">
+            <img src="../imagenes/lospasosdeluna.png" alt="Captura del sitio Los Pasos de Luna" class="proyecto-img">
+            <div class="proyecto-info">
+                <h2>Sobre el proyecto</h2>
+                <p>Los Pasos de Luna es una tienda en línea con colección de zapatos de cuero artesanal. El sitio permite a los usuarios filtrar productos por talla mínima y máxima en centímetros para encontrar el mejor ajuste.</p>
+                <p>Cuenta con secciones de ofertas exclusivas, descuentos especiales y facilidades de pago con tarjeta o en efectivo. La página está alojada bajo el dominio de Fase Lunar, integrando ambos negocios del mismo cliente.</p>
+                <p>El proyecto demuestra capacidad para desarrollar tiendas en línea funcionales con catálogo de productos, filtros interactivos y flujo de compra claro para el usuario.</p>
+                <p class="proyecto-tech-label">Tecnologías usadas</p>
+                <div class="tech-tags">
+                    <span class="habilidad">HTML</span>
+                    <span class="habilidad">CSS</span>
+                    <span class="habilidad">JavaScript</span>
+                    <span class="habilidad">Diseño responsivo</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <a href="mailto:quetzal.mq97@gmail.com" target="_blank" class="social-icon" rel="noopener">
-      <i class="fas fa-envelope"></i>
-    </a>
+    <footer>
+        <p>&copy; 2025 SMM Portafolio — Todos los derechos reservados</p>
+    </footer>
 
-    <a href="https://www.linkedin.com/in/sergio-mart%C3%ADnez-8500961b4/"
-       target="_blank" class="social-icon" rel="noopener">
-      <i class="fab fa-linkedin"></i>
-    </a>
-
-    <!--
-    <a href="https://github.com/SergioMMQ" target="_blank" class="social-icon" rel="noopener">
-      <i class="fab fa-github"></i>
-    </a>
-    -->
-
-    <a href="https://www.google.com/maps/place/Ciudad+de+M%C3%A9xico,+CDMX"
-       target="_blank" class="social-icon" rel="noopener">
-      <i class="fas fa-map-marker-alt"></i>
-    </a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Los Pasos de Luna - Todos los derechos reservados</p>
-  </footer>
+    <script src="../script.js"></script>
 </body>
 </html>

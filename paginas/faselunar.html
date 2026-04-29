@@ -1,49 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fase Lunar</title>
+    <title>Fase Lunar — SMM Portafolio</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="stylepaginas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../imagenes/yo.jpeg" type="image/jpeg">
 </head>
 <body>
-    
-    
-    <header>
-        <h1>FASE LUNAR</h1>      
-    </header>
-    <main>
-        <div class="main-content">
-            <img src="../imagenes/fase_lunar.png" alt="Imagen FASE LUNAR" class="main-image">
-            <p class="description">La página "FASE LUNAR" es de un spa inspirado en las fases de la luna, ofreciendo servicios como masajes relajantes, limpiezas faciales y exfoliaciones. Cada fase lunar simboliza un enfoque diferente para el bienestar, como purificación, nutrición, iluminación y liberación. Está ubicado en Ciudad de México y cuenta con contacto a través de WhatsApp para reservaciones o regalos.</p>
-        </div>
-    </main>
 
+    <nav aria-label="Navegación principal">
+        <a href="../index.html" class="portfolio-title">MI PORTAFOLIO</a>
+        <ul id="menu" class="menu hidden">
+            <li><a href="../index.html#inicio">INICIO</a></li>
+            <li><a href="../index.html#proyectos">PROYECTOS</a></li>
+            <li><a href="../index.html#sobre-mi">SOBRE MI</a></li>
+            <li><a href="../index.html#habilidades">HABILIDADES</a></li>
+            <li><a href="../index.html#experiencia">EXPERIENCIA</a></li>
+            <li><a href="../index.html#testimonios">TESTIMONIOS</a></li>
+            <li><a href="../index.html#contacto">CONTACTO</a></li>
+            <li><a href="https://sergiommq.github.io/certificados/" target="_blank" rel="noopener">CERTIFICADOS</a></li>
+            <li><a href="https://drive.google.com/file/d/1TGNW_20NVsL_9C2Ppe_psuTdxpZEsDPt/view?usp=sharing" id="ultimo" target="_blank" rel="noopener">CV PDF</a></li>
+        </ul>
+        <button class="menu-icon" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    </nav>
 
-    <h2>Contacto</h2>
-    <section class="contacto">
-        <div>
-            <a href="https://wa.me/525550538743?text=Me%20comunico%20con%20usted%20con%20el%20motivo%20de" target="_blank" class="social-icon">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+    <section class="proyecto-hero">
+        <div class="proyecto-hero-inner">
+            <div class="proyecto-breadcrumb">
+                <a href="../index.html#proyectos" class="btn-back">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a proyectos
+                </a>
+                <span class="breadcrumb-sep">/</span>
+                <span class="tarjeta-tag tag--web">Sitio Web</span>
+            </div>
+            <h1>Fase Lunar</h1>
+            <p>Sitio web para un spa en CDMX inspirado en las fases de la luna. Masajes relajantes, limpiezas faciales y rituales de bienestar para cada ciclo lunar.</p>
+            <div class="proyecto-cta">
+                <a href="https://www.faselunar.com.mx/" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Ver sitio en vivo
+                </a>
+            </div>
         </div>
-            <a href="mailto:quetzal.mq97@gmail.com" target="_blank" class="social-icon">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/sergio-mart%C3%ADnez-8500961b4/" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
-                        <!-- <a href="https://github.com/SergioMMQ" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a> -->
-            <a href="https://www.google.com/maps/place/Ciudad+de+M%C3%A9xico,+CDMX" target="_blank" class="social-icon">
-                <i class="fas fa-map-marker-alt"></i>
-            </a>
     </section>
-    
+
+    <section class="proyecto-body">
+        <div class="proyecto-body-inner">
+            <img src="../imagenes/fase_lunar.png" alt="Captura del sitio Fase Lunar" class="proyecto-img">
+            <div class="proyecto-info">
+                <h2>Sobre el proyecto</h2>
+                <p>Fase Lunar es el sitio web de un spa ubicado en Ciudad de México. El concepto visual está inspirado en los ciclos de la luna, donde cada fase simboliza un enfoque diferente para el bienestar: purificación, nutrición, iluminación y liberación.</p>
+                <p>El sitio presenta los servicios de forma clara y atractiva, con secciones para masajes, limpiezas faciales y exfoliaciones. Incluye integración con WhatsApp para reservaciones, información de ubicación y una experiencia visual coherente con la identidad del negocio.</p>
+                <p>El sitio está en producción con dominio propio y ha sido desarrollado para un cliente real, con enfoque en conversión y experiencia de usuario.</p>
+                <p class="proyecto-tech-label">Tecnologías usadas</p>
+                <div class="tech-tags">
+                    <span class="habilidad">HTML</span>
+                    <span class="habilidad">CSS</span>
+                    <span class="habilidad">JavaScript</span>
+                    <span class="habilidad">Diseño responsivo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Fase Lunar - Todos los derechos reservados</p>
+        <p>&copy; 2025 SMM Portafolio — Todos los derechos reservados</p>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

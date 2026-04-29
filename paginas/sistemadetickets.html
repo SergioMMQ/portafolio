@@ -1,50 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISTEMA DE TICKETS</title> <!--agregar titulo-->
+    <title>Sistema de Tickets — SMM Portafolio</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="stylepaginas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../imagenes/yo.jpeg" type="image/jpeg">
 </head>
 <body>
-    
-    
-    <header>
-        <h1>SISTEMA DE TICKETS</h1><!--agregar titulo-->      
-    </header>
-    <main>
-        <div class="main-content">
-            <img src="../imagenes/tickets.png" alt="Imagen FASE LUNAR" class="main-image"><!--agregar imagen-->
-            <!--descripcion-->
-            <p class="description">El Sistema de Tickets para Odoo 17 permite a las empresas gestionar solicitudes, problemas y tareas de manera organizada y eficiente. Con una interfaz intuitiva, flujo de trabajo flexible y seguimiento de actividades detallado, este módulo es la solución ideal para equipos técnicos y de soporte. Categoriza, asigna y resuelve tickets rápidamente, mejorando la productividad y garantizando un historial claro de todas las interacciones.</p>
-        </div>
-    </main>
 
+    <nav aria-label="Navegación principal">
+        <a href="../index.html" class="portfolio-title">MI PORTAFOLIO</a>
+        <ul id="menu" class="menu hidden">
+            <li><a href="../index.html#inicio">INICIO</a></li>
+            <li><a href="../index.html#proyectos">PROYECTOS</a></li>
+            <li><a href="../index.html#sobre-mi">SOBRE MI</a></li>
+            <li><a href="../index.html#habilidades">HABILIDADES</a></li>
+            <li><a href="../index.html#experiencia">EXPERIENCIA</a></li>
+            <li><a href="../index.html#testimonios">TESTIMONIOS</a></li>
+            <li><a href="../index.html#contacto">CONTACTO</a></li>
+            <li><a href="https://sergiommq.github.io/certificados/" target="_blank" rel="noopener">CERTIFICADOS</a></li>
+            <li><a href="https://drive.google.com/file/d/1TGNW_20NVsL_9C2Ppe_psuTdxpZEsDPt/view?usp=sharing" id="ultimo" target="_blank" rel="noopener">CV PDF</a></li>
+        </ul>
+        <button class="menu-icon" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    </nav>
 
-    <h2>Contacto</h2>
-    <section class="contacto">
-        <div>
-            <a href="https://wa.me/525550538743?text=Me%20comunico%20con%20usted%20con%20el%20motivo%20de" target="_blank" class="social-icon">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+    <section class="proyecto-hero">
+        <div class="proyecto-hero-inner">
+            <div class="proyecto-breadcrumb">
+                <a href="../index.html#proyectos" class="btn-back">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a proyectos
+                </a>
+                <span class="breadcrumb-sep">/</span>
+                <span class="tarjeta-tag tag--odoo">Módulo Odoo</span>
+            </div>
+            <h1>Sistema de Tickets</h1>
+            <p>Módulo personalizado para Odoo 17 que permite gestionar solicitudes, incidencias y tareas de soporte de forma organizada. Publicado en el Odoo App Store oficial.</p>
+            <div class="proyecto-cta">
+                <a href="https://apps.odoo.com/apps/modules/17.0/sistema_de_tickets" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Ver en Odoo App Store
+                </a>
+            </div>
         </div>
-            <a href="mailto:quetzal.mq97@gmail.com" target="_blank" class="social-icon">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/sergio-mart%C3%ADnez-8500961b4/" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
-                        <!-- <a href="https://github.com/SergioMMQ" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a> -->
-            <a href="https://www.google.com/maps/place/Ciudad+de+M%C3%A9xico,+CDMX" target="_blank" class="social-icon">
-                <i class="fas fa-map-marker-alt"></i>
-            </a>
     </section>
-    
+
+    <section class="proyecto-body">
+        <div class="proyecto-body-inner">
+            <img src="../imagenes/tickets.png" alt="Captura del módulo Sistema de Tickets en Odoo" class="proyecto-img">
+            <div class="proyecto-info">
+                <h2>Sobre el proyecto</h2>
+                <p>El Sistema de Tickets es un módulo desarrollado para Odoo 17 que permite a las empresas gestionar solicitudes, problemas y tareas de soporte de manera organizada y eficiente.</p>
+                <p>Con una interfaz intuitiva, flujo de trabajo configurable y seguimiento detallado de actividades, el módulo es la solución ideal para equipos técnicos y de atención al cliente. Permite categorizar, asignar y resolver tickets rápidamente, mejorando la productividad y garantizando un historial claro de todas las interacciones.</p>
+                <p>Desarrollado en Python y XML siguiendo los estándares de Odoo, fue publicado en el marketplace oficial, lo que implica revisión de código y cumplimiento de las guías de calidad de Odoo S.A.</p>
+                <p class="proyecto-tech-label">Tecnologías usadas</p>
+                <div class="tech-tags">
+                    <span class="habilidad">Python</span>
+                    <span class="habilidad">XML</span>
+                    <span class="habilidad">Odoo 17</span>
+                    <span class="habilidad">PostgreSQL</span>
+                    <span class="habilidad">ORM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Fase Lunar - Todos los derechos reservados</p>
+        <p>&copy; 2025 SMM Portafolio — Todos los derechos reservados</p>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

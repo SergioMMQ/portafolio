@@ -1,116 +1,176 @@
-/* Variables de colores para fácil ajuste */
-:root {
-    --primary-color: #333;
-    --secondary-color: #fff;
-    --accent-color: #c49d64;
-    --text-color: #fff;
-    --background-color: #f9f9f9;
-    --hover-color: #305d73;
+/* =========================
+   Project Pages
+   Builds on ../style.css — only project-specific styles here.
+========================= */
+
+/* Hero */
+.proyecto-hero {
+  min-height: 44vh;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  padding: 110px 8% 70px;
+  position: relative;
+  overflow: hidden;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.proyecto-hero::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37,99,235,0.16) 0%, transparent 65%);
+  top: -150px;
+  right: -100px;
+  pointer-events: none;
 }
 
-h2{
-    text-transform: uppercase;
+.proyecto-hero::after {
+  content: '';
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(124,58,237,0.13) 0%, transparent 65%);
+  bottom: -80px;
+  left: -60px;
+  pointer-events: none;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.proyecto-hero-inner {
+  max-width: 780px;
+  position: relative;
+  z-index: 1;
 }
 
-header {
-    width: 100%;
-    text-align: center;
-    background-color: var(--primary-color);
-    padding: 1.5rem 0;
+/* Breadcrumb */
+.proyecto-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
-header h1 {
-    color: var(--secondary-color);
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
 }
 
-.main-content {
-    max-width: 800px;
-    margin: 2rem auto;
-    text-align: center;
-    padding: 1.5rem;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.btn-back:hover { color: #fff; }
+
+.breadcrumb-sep {
+  color: rgba(255,255,255,0.2);
+  font-size: 0.75rem;
 }
 
-.main-image {
-    width: 70%;
-    max-width: 400px;
-    border-radius: 30px 10px;
+/* Override: tag is inline in hero (not absolute on image) */
+.proyecto-hero .tarjeta-tag {
+  position: static;
+  display: inline-block;
 }
 
-.description {
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    padding: 1rem;
-    line-height: 1.6;
-    text-align: justify;
+/* Title */
+.proyecto-hero h1 {
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin: 0.7rem 0 1.1rem;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
-section.contacto {
-    padding: 0 0 100px 0;
-    display: flex;
-    text-align: center;
-    flex-wrap: wrap;
+.proyecto-hero-inner > p {
+  color: rgba(255,255,255,0.72);
+  font-size: 1rem;
+  line-height: 1.78;
+  margin-bottom: 2rem;
+  max-width: 580px;
 }
 
-.contacto h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
+.proyecto-cta {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
 }
 
-
-.icono {
-    margin: 0.7rem 0;
+/* Body */
+.proyecto-body {
+  background: var(--bg-white);
+  padding: 5.5rem 2rem 6rem;
 }
 
-.social-icon {
-    color: var(--primary-color);
-    text-decoration: none;
-    padding: 1rem;
-    border-radius: 6px;
-    background-color: var(--secondary-color);
-    display: inline-block;
-    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+.proyecto-body-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4.5rem;
+  align-items: start;
 }
 
-.social-icon i {
-    font-size: 1.4rem;
+.proyecto-img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  display: block;
 }
 
-.social-icon:hover {
-    color: var(--secondary-color);
-    background-color: var(--hover-color);
-    transform: scale(1.05);
+.proyecto-info h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 1rem;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: none;
 }
 
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+.proyecto-info p {
+  color: var(--text-muted);
+  line-height: 1.82;
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+}
+
+.proyecto-tech-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 1.75rem 0 0.75rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  .proyecto-hero {
+    padding: 95px 6% 55px;
+    min-height: unset;
+  }
+
+  .proyecto-body-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .proyecto-img {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }

@@ -1,390 +1,483 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFQ1KSEEDY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LFQ1KSEEDY');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Sergio Martínez — Desarrollador Full Stack especializado en soluciones web modernas, automatización y desarrollo en Odoo.">
     <title>SMM Portafolio</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFQ1KSEEDY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LFQ1KSEEDY');
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <link rel="icon" href="imagenes/yo.jpeg" sizes="16x16" type="image/png">
+    <link rel="icon" href="imagenes/yo.jpeg" type="image/jpeg">
 </head>
 <body>
 
-    <nav>
-        <div class="menu-icon" onclick="toggleMenu()">
-            &#9776; <!-- Este es el icono de hamburguesa -->
-        </div>
+    <nav aria-label="Navegación principal">
+        <a href="/" class="portfolio-title">MI PORTAFOLIO</a>
         <ul id="menu" class="menu hidden">
-            <a href="/" class="portfolio-title">MI PORTAFOLIO</a>
             <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#sobre-mi">SOBRE MI</a></li>
             <li><a href="#proyectos">PROYECTOS</a></li>
+            <li><a href="#sobre-mi">SOBRE MI</a></li>
+            <li><a href="#habilidades">HABILIDADES</a></li>
+            <li><a href="#experiencia">EXPERIENCIA</a></li>
             <li><a href="#testimonios">TESTIMONIOS</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
-            <li><a href="https://sergiommq.github.io/certificados/" target="_blank">CERTIFICADOS</a></li>
-            <li style="margin-right: auto;"><a href="https://drive.google.com/file/d/1TGNW_20NVsL_9C2Ppe_psuTdxpZEsDPt/view?usp=sharing" id="ultimo">CV PDF</a></li>
+            <li><a href="https://sergiommq.github.io/certificados/" target="_blank" rel="noopener">CERTIFICADOS</a></li>
+            <li><a href="https://drive.google.com/file/d/1TGNW_20NVsL_9C2Ppe_psuTdxpZEsDPt/view?usp=sharing" id="ultimo" target="_blank" rel="noopener">CV PDF</a></li>
         </ul>
+        <button class="menu-icon" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
     </nav>
-
 
     <section id="inicio">
         <div class="inicio-container">
             <div class="inicio-texto">
+                <p class="hero-nombre">Sergio Martínez Meneses</p>
                 <h1>Desarrollador <span class="gradient-text">Full Stack</span></h1>
-                <p>Impulso negocios a través de tecnología, automatización y experiencias digitales bien pensadas. Desarrollo soluciones web modernas, escalables y orientadas a datos, enfocadas en crecer, optimizar procesos y generar resultados reales.</p>
-                    <div class="cta-buttons">
-                        <a href="#proyectos" class="btn btn-primary">
-                            Ver proyectos   
-                        </a>
-                        
-                        <a href="#contacto" class="btn btn-outline">
-                            Contactarme 
-                        </a>
-
-                        <button class="btn btn-secondary" onclick="downloadCV()">
-                            Descargar CV
-                        </button>
-                    </div>
+                <p>Especialista de TI y consultor Odoo con proyectos web en producción. Combino ingeniería, código y visión de negocio para crear soluciones que resuelven problemas reales.</p>
+                <div class="cta-buttons">
+                    <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+                    <a href="#contacto" class="btn btn-outline">Contactarme</a>
+                    <button class="btn btn-secondary" onclick="downloadCV()">Descargar CV</button>
+                </div>
             </div>
-            <img src="imagenes/sergio.jpg" alt="Foto personal" class="foto-perfil">
+            <img src="imagenes/sergio.jpg" alt="Foto de Sergio Martínez" class="foto-perfil">
         </div>
     </section>
 
-    <section class="sobre-mi" id="sobre-mi">
+    <section id="proyectos" class="fade-in">
+        <h2>PROYECTOS DESTACADOS</h2>
+        <div class="divider"></div>
+        <div class="tarjetas">
+
+            <!-- 1. Cliente real con dominio propio -->
+            <div class="tarjeta">
+                <div class="tarjeta-img-wrap">
+                    <img src="imagenes/ketsaltik.png" alt="Ketsaltik Portafolio" loading="lazy">
+                    <span class="tarjeta-tag tag--web">Portafolio</span>
+                </div>
+                <div class="contenido-tarjeta">
+                    <h3>Ketsaltik</h3>
+                    <p>Portafolio artístico de body paint y maquillaje creativo para eventos. Sitio en producción.</p>
+                    <div class="tarjeta-btns">
+                        <a href="paginas/ketsaltik.html" class="btn-2">Ver Más</a>
+                        <a href="https://www.ketsaltik.com/" target="_blank" rel="noopener" class="btn-2">Ver Página</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Cliente real con dominio propio -->
+            <div class="tarjeta">
+                <div class="tarjeta-img-wrap">
+                    <img src="imagenes/fase_lunar.png" alt="Fase Lunar" loading="lazy">
+                    <span class="tarjeta-tag tag--web">Sitio Web</span>
+                </div>
+                <div class="contenido-tarjeta">
+                    <h3>Fase Lunar</h3>
+                    <p>Spa en CDMX con masajes, faciales y rituales por fases de luna. Sitio en producción.</p>
+                    <div class="tarjeta-btns">
+                        <a href="paginas/faselunar.html" class="btn-2">Ver Más</a>
+                        <a href="https://www.faselunar.com.mx/" target="_blank" rel="noopener" class="btn-2">Ver Página</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Módulo Odoo publicado en App Store -->
+            <div class="tarjeta">
+                <div class="tarjeta-img-wrap">
+                    <img src="imagenes/tickets.png" alt="Sistema de Tickets" loading="lazy">
+                    <span class="tarjeta-tag tag--odoo">Módulo Odoo</span>
+                </div>
+                <div class="contenido-tarjeta">
+                    <h3>Sistema de Tickets</h3>
+                    <p>Módulo Odoo para gestión de solicitudes, seguimiento y resolución de incidencias. Publicado en Odoo App Store.</p>
+                    <div class="tarjeta-btns">
+                        <a href="paginas/sistemadetickets.html" class="btn-2">Ver Más</a>
+                        <a href="https://apps.odoo.com/apps/modules/17.0/sistema_de_tickets" target="_blank" rel="noopener" class="btn-2">Ver en Odoo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Módulo Odoo publicado en App Store -->
+            <div class="tarjeta">
+                <div class="tarjeta-img-wrap">
+                    <img src="imagenes/documents_shared.png" alt="Documentos Compartidos" loading="lazy">
+                    <span class="tarjeta-tag tag--odoo">Módulo Odoo</span>
+                </div>
+                <div class="contenido-tarjeta">
+                    <h3>Documentos Compartidos</h3>
+                    <p>Módulo Odoo para compartir y gestionar documentos de forma colaborativa. Publicado en Odoo App Store.</p>
+                    <div class="tarjeta-btns">
+                        <a href="paginas/documentsshared.html" class="btn-2">Ver Más</a>
+                        <a href="https://apps.odoo.com/apps/modules/17.0/documents_shared" target="_blank" rel="noopener" class="btn-2">Ver en Odoo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Cliente real -->
+            <div class="tarjeta">
+                <div class="tarjeta-img-wrap">
+                    <img src="imagenes/lospasosdeluna.png" alt="Los Pasos de Luna" loading="lazy">
+                    <span class="tarjeta-tag tag--web">Sitio Web</span>
+                </div>
+                <div class="contenido-tarjeta">
+                    <h3>Los Pasos de Luna</h3>
+                    <p>Tienda de zapatos de cuero y accesorios para eventos y fotografía. Cliente real.</p>
+                    <div class="tarjeta-btns">
+                        <a href="paginas/lospasosdeluna.html" class="btn-2">Ver Más</a>
+                        <a href="https://www.faselunar.com.mx/zapatos.html" target="_blank" rel="noopener" class="btn-2">Ver Página</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Proyecto de diseño -->
+            <div class="tarjeta">
+                <div class="tarjeta-img-wrap">
+                    <img src="imagenes/barberia.png" alt="Barbería" loading="lazy">
+                    <span class="tarjeta-tag tag--web">Sitio Web</span>
+                </div>
+                <div class="contenido-tarjeta">
+                    <h3>Barbería</h3>
+                    <p>Barbería moderna con catálogo de servicios y estilo visual de alto impacto.</p>
+                    <div class="tarjeta-btns">
+                        <a href="paginas/barberia.html" class="btn-2">Ver Más</a>
+                        <a href="https://sergiommq.github.io/Barber-a-Alura-proyecto/" target="_blank" rel="noopener" class="btn-2">Ver Página</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. App JS -->
+            <div class="tarjeta">
+                <div class="tarjeta-img-wrap">
+                    <img src="imagenes/encriptador.png" alt="Encriptador de Texto" loading="lazy">
+                    <span class="tarjeta-tag tag--js">JavaScript</span>
+                </div>
+                <div class="contenido-tarjeta">
+                    <h3>Encriptador de Texto</h3>
+                    <p>App web para cifrar y descifrar mensajes usando sustitución de caracteres.</p>
+                    <div class="tarjeta-btns">
+                        <a href="paginas/encriptador.html" class="btn-2">Ver Más</a>
+                        <a href="https://sergiommq.github.io/encriptadorjs/" target="_blank" rel="noopener" class="btn-2">Ver Página</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Proyecto de restaurante -->
+            <div class="tarjeta">
+                <div class="tarjeta-img-wrap">
+                    <img src="imagenes/cefeypizzas.png" alt="Café y Pizzas" loading="lazy">
+                    <span class="tarjeta-tag tag--web">Sitio Web</span>
+                </div>
+                <div class="contenido-tarjeta">
+                    <h3>Café y Pizzas</h3>
+                    <p>Sitio para restaurante con menú, promociones y variedad de platillos.</p>
+                    <div class="tarjeta-btns">
+                        <a href="paginas/cafeypizzas.html" class="btn-2">Ver Más</a>
+                        <a href="https://sergiommq.github.io/paginawebpizza/" target="_blank" rel="noopener" class="btn-2">Ver Página</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Proyecto de aprendizaje -->
+            <div class="tarjeta">
+                <div class="tarjeta-img-wrap">
+                    <img src="imagenes/juego_secreto.png" alt="Juego del Número Secreto" loading="lazy">
+                    <span class="tarjeta-tag tag--js">JavaScript</span>
+                </div>
+                <div class="contenido-tarjeta">
+                    <h3>Número Secreto</h3>
+                    <p>Juego interactivo de adivinanza con lógica de pistas y contador de intentos.</p>
+                    <div class="tarjeta-btns">
+                        <a href="paginas/Juegodelnumerosecreto.html" class="btn-2">Ver Más</a>
+                        <a href="https://sergiommq.github.io/juegosecreto/" target="_blank" rel="noopener" class="btn-2">Ver Página</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sobre-mi fade-in" id="sobre-mi">
         <div class="container">
             <div class="section-title">
                 <h2>Sobre mí</h2>
                 <div class="divider"></div>
             </div>
-
             <div class="grid">
                 <div>
-                    <h3>Desarrollador apasionado por crear soluciones digitales impactantes</h3>
-                    
-                    <p>
-                    Soy desarrollador full stack enfocado en la creación de soluciones web y móviles orientadas a procesos claros,
-                    eficiencia operativa y crecimiento digital. Me motiva transformar ideas en productos funcionales que realmente
-                    aporten valor tanto a los usuarios como a las empresas.
-                    </p>
-
-                    <p>
-                    Trabajo con tecnologías web modernas y con bases de datos SQL y NoSQL, priorizando siempre la estructura,
-                    la mantenibilidad del código y la correcta gestión de la información. Mi enfoque se basa en seguir buenas
-                    prácticas de desarrollo, normas de seguridad, control de accesos y optimización de procesos digitales.
-                    </p>
-
-                    <p>
-                    A lo largo de mi trayectoria he colaborado con startups y empresas en la implementación y mejora de sistemas
-                    digitales, participando desde el análisis de requerimientos hasta el despliegue y seguimiento de las soluciones.
-                    Creo firmemente en la mejora continua, el aprendizaje constante y la adaptación a nuevas tendencias tecnológicas
-                    para ofrecer soluciones sólidas y confiables.
-                    </p>
-
+                    <h3>Ingeniero y Desarrollador Full Stack con experiencia en sistemas empresariales</h3>
+                    <p>Soy estudiante de Ingeniería en Comunicaciones y Electrónica en el IPN (ESIME) y Desarrollador Full Stack. Actualmente me desempeño como Especialista de TI y Coordinador en Delihealth's, donde lidero la infraestructura tecnológica, implemento soluciones ERP/CRM personalizadas y diseño estrategias de ciberseguridad.</p>
+                    <p>Cuento con más de 2 años de experiencia como Ingeniero de Sistemas y Consultor en Copiisa Offshore, especializado en la implementación y personalización de Odoo Enterprise y Community para automatizar procesos y mejorar la eficiencia operativa. Tengo también formación en redes (Cisco Networking Academy), soporte de TI (Google IT Support) y análisis de datos.</p>
+                    <p>Mi enfoque combina el desarrollo web con visión de negocio: construyo soluciones que van desde aplicaciones web hasta sistemas empresariales completos, siempre orientadas a generar resultados reales y medibles. Creo en la mejora continua, el aprendizaje constante y la colaboración efectiva.</p>
                 </div>
             </div>
         </div>
-    </section>  
-
-    <section id="proyectos" >
-        <h2>PROYECTOS DESTACADOS</h2>
-        <div class="divider"></div>
-
-        <!-- <h3 style="border: 1px black solid;">PAGINAS WEB</h3> -->
-        <div class="tarjetas">
-            <div >
-                <div>
-                </div>
-                <div class="tarjeta">
-                    <img src="imagenes/fase_lunar.png" alt="Imagen FASE LUNAR">
-                    <div class="contenido-tarjeta">
-                        <h3>FASE LUNAR</h3>
-                        <p>Spa en CDMX con masajes, faciales y rituales por fases. 🌙✨</p>
-                        <a href="paginas/faselunar.html" class="btn-2 btn-primary">Ver Más</a>
-                        <a href="https://sergiommq.github.io/faselunar/" target="_blank" class="btn-2">Ver Página</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                </div>
-                <div class="tarjeta">
-                    <img src="imagenes/cefeypizzas.png" alt="Imagen de Barberia">
-                    <div class="contenido-tarjeta">
-                        <h3>CAFE Y PIZZAS</h3>
-                        <p>Café y comida variada con promociones, pizzas, crepas y bebidas. ☕🍕🥤</p>
-                        <a href="paginas/cafeypizzas.html" class="btn-2 btn-primary">Ver Más</a>
-                        <a href="https://sergiommq.github.io/paginawebpizza/" target="_blank" class="btn-2">Ver Página</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                </div>
-                <div class="tarjeta">
-                    <img src="imagenes/lospasosdeluna.png" alt="Imagen de Los Pasos de Luna">
-                    <div class="contenido-tarjeta">
-                        <h3>LOS PASOS DE LUNA</h3>
-                        <p>Tienda de zapatos de cuero y accesorios para eventos y fotografía. 🌙✨</p>
-                        <a href="paginas/lospasosdeluna.html" class="btn-2 btn-primary">Ver Más</a>
-                        <a href="https://www.faselunar.com.mx/zapatos.html" target="_blank" class="btn-2">Ver Página</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                </div>
-                <div class="tarjeta">
-                    <img src="imagenes/barberia.png" alt="Imagen de Barberia">
-                    <div class="contenido-tarjeta">
-                        <h3>BARBERIA</h3>
-                        <p>Barbería moderna con servicios completos y estilo clásico para todos. ✂️💈</p>
-                        <a href="paginas/barberia.html" class="btn-2 btn-primary">Ver Más</a>
-                        <a href="https://sergiommq.github.io/Barber-a-Alura-proyecto/" target="_blank" class="btn-2">Ver Página</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                </div>
-                <div class="tarjeta">
-                    <img src="imagenes/ketsaltik.png" alt="Imagen de Documents Shared">
-                    <div class="contenido-tarjeta">
-                        <h3>KETSALTIK - PORTAFOLIO</h3>
-                        <p>Arte de body paint y maquillaje creativo para eventos y fotografía. 🎨✨</p>
-                        <a href="paginas/ketsaltik.html" class="btn-2 btn-primary">Ver Más</a>
-                        <a href="https://www.ketsaltik.com/" target="_blank" class="btn-2">Ver Página</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                </div>
-                <div class="tarjeta">
-                    <img src="imagenes/tickets.png" alt="Imagen de ">
-                    <div class="contenido-tarjeta">
-                        <h3>SISTEMA DE TICKETS</h3>
-                        <p>Sistema de tickets para gestión de tareas y seguimiento de proyectos. 📋</p>
-                        <a href="paginas/sistemadetickets.html" class="btn-2 btn-primary">Ver Más</a>
-                        <a href="https://apps.odoo.com/apps/modules/17.0/sistema_de_tickets" target="_blank" class="btn-2">Ver Página</a>
-                    </div>
-                </div>
-            </div>
-            <div> 
-                <div>
-                </div>
-                <div class="tarjeta">
-                    <img src="imagenes/documents_shared.png" alt="Imagen de Documents Shared">
-                    <div class="contenido-tarjeta">
-                        <h3>DOCUMENTOS COMPARTIDOS</h3>
-                        <p>Documentos compartidos para gestión de proyectos y colaboración. 📄</p>
-                        <a href="paginas/documentsshared.html" class="btn-2 btn-primary">Ver Más</a>
-                        <a href="https://apps.odoo.com/apps/modules/17.0/documents_shared" target="_blank" class="btn-2">Ver Página</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div>
-                <div>
-                </div>
-                <div class="tarjeta">
-                    <img src="imagenes/juego_secreto.png" alt="Imagen de ">
-                    <div class="contenido-tarjeta">
-                        <h3>JUEGO DEL NUMERO SECRETO</h3>
-                        <p>Juego interactivo de adivinanza de números. 🎲</p>
-                        <a href="paginas/Juegodelnumerosecreto.html" class="btn-2 btn-primary">Ver Más</a>
-                        <a href="https://sergiommq.github.io/juegosecreto/" target="_blank" class="btn-2">Ver Página</a>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                </div>
-                <div class="tarjeta">
-                    <img src="imagenes/encriptador.png" alt="Imagen de Encriptador">
-                    <div class="contenido-tarjeta">
-                        <h3>ENCRIPTADOR</h3>
-                        <p>Web de encriptación de texto. 🔐</p>
-                        <a href="paginas/encriptador.html" class="btn-2 btn-primary">Ver Más</a>
-                        <a href="https://sergiommq.github.io/encriptadorjs/" target="_blank" class="btn-2">Ver Página</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </section>
 
-<section id="habilidades" class="fade-in">
-    <h2>Habilidades Tecnicas</h2>
-    <div class="divider"></div>
-    
-    <!-- Habilidades técnicas -->
-    <div class="habilidades-container">
-        <span class="habilidad">HTML</span>
-        <span class="habilidad">CSS</span>
-        <span class="habilidad">JavaScript</span>
-        <span class="habilidad">Java</span>
-        <span class="habilidad">Python</span>
-        <span class="habilidad">SQL</span>
-        <span class="habilidad">MySQL</span>
-        <span class="habilidad">PostgreSQL</span>
-        <span class="habilidad">Análisis de datos</span>
-        <span class="habilidad">Desarrollo en Odoo</span>
-    </div>
-    <h2>Habilidades Blandas</h2>
-    <div class="divider"></div>
-
-    <!-- Habilidades blandas -->
-    <div class="habilidades-container">
-        <span class="habilidad">Pensamiento analítico</span>
-        <span class="habilidad">Resolución de problemas</span>
-        <span class="habilidad">Gestión de procesos</span>
-        <span class="habilidad">Comunicación efectiva</span>
-        <span class="habilidad">Trabajo en equipo</span>
-        <span class="habilidad">Adaptabilidad</span>
-        <span class="habilidad">Aprendizaje continuo</span>
-        <span class="habilidad">Organización</span>
-        <span class="habilidad">Atención al detalle</span>
-        <span class="habilidad">Enfoque en seguridad</span>
-    </div>
-</section>
-
-   
-<section id="testimonios" class="fade-in">
-    <h2>TESTIMONIOS</h2>
-    <div class="divider"></div>
-    
-    <span>Pasa el cursor sobre una foto para ver el testimonio.</span>
-    <!-- Imágenes en fila -->
-    <div class="testimonios-container fila-imagenes">
-
-        <img src="imagenes/gabriela.jpg"
-             alt="Blanca Gabriela Cuaya Retana"
-             class="testimonio-imagen"
-             data-nombre="Blanca Gabriela Cuaya Retana"
-             data-texto="Tuve la oportunidad de colaborar con Sergio en diferentes proyectos y puedo decir que es un profesional altamente competente, comprometido y con una gran visión estratégica. Su capacidad para ofrecer soluciones en el área de tecnología es efectiva, siempre dispuesto a generar propuestas innovadoras y brindar soporte en todo momento, lo cual ha sido fundamental para el éxito de los proyectos en los que hemos trabajado juntos. Sergio destaca por su liderazgo natural, su habilidad para coordinar equipos multidisciplinarios y su enfoque orientado a resultados. Además, demuestra siempre una excelente comunicación, profesionalismo y disposición para impulsar mejoras continuas en cada proceso. Es un gusto colaborar con él. Lo recomiendo ampliamente por su talento, compromiso y alto sentido de responsabilidad profesional." />
-
-        <img src="imagenes/Emmanuel.jpg"
-             alt="Jose Emmanuel Hernandez Pérez"
-             class="testimonio-imagen"
-             data-nombre="Jose Emmanuel Hernandez Pérez"
-             data-texto="Recomiendo ampliamente a Sergio Martínez, ya que he tenido la oportunidad de colaborar con él en varias empresas y en todas ha demostrado ser un trabajador muy eficiente que sobrepasa las expectativas. En la parte técnica como programador e ingeniero de sistemas, ha cumplido con todos los retos y objetivos que se le presentan. Por último y no menos importante, es una persona tranquila, cordial y con la mayor disposición a ayudar a los demás." />
-
-        <img src="imagenes/valentin.jpeg"
-             alt="Francisco Valentin Pichardo Torres"
-             class="testimonio-imagen"
-             data-nombre="Francisco Valentin Pichardo Torres"
-             data-texto="Recomiendo ampliamente a Sergio Martínez, ya que he tenido la oportunidad de colaborar con él en varias empresas y en todas ha demostrado ser un trabajador muy eficiente que sobrepasa las expectativas. En la parte técnica como programador e ingeniero de sistemas, ha cumplido con todos los retos y objetivos que se le presentan. Por último y no menos importante, es una persona tranquila, cordial y con la mayor disposición a ayudar a los demás." />
-
-        <img src="imagenes/paulina.jpeg"
-             alt="Ingrid Paulina Castillo Pérez"
-             class="testimonio-imagen"
-             data-nombre="Ingrid Paulina Castillo Pérez"
-             data-texto="Recomiendo a Sergio Martínez ampliamente por sus aptitudes en el área tecnológica, su facilidad para aprender y sobre todo por su calidad como persona. Es alguien comprometido con todo lo que hace y una persona resiliente y buen compañero. Es un profesionista que constantemente busca mantenerse actualizado y siempre logra superar las expectativas." />
-
-        <img src="imagenes/jazmin.jpeg"
-             alt="Jazmin Gomez"
-             class="testimonio-imagen"
-             data-nombre="Jazmin Gomez"
-             data-texto="Recomiendo a Sergio quien es muy profesional y responsable. Sumamente comprometido con entregar resultados y brindar la mejor de las opciones de resolución a las dificultades que se le presenten." />
-
-        <img src="imagenes/yherel.jpeg"
-             alt="Yherel Mindai Dominguez Dominguez"
-             class="testimonio-imagen"
-             data-nombre="Yherel Mindai Dominguez Dominguez"
-             data-texto="Es muy responsable, se adapta para encontrar soluciones creativas y razonables." />
-
-    </div>
-
-        <!-- Globo de texto -->
-    <div id="globo-testimonio" class="globo-texto">
-        <p class="globo-nombre">...</p>
-        <p class="globo-mensaje"></p>
-    </div>
-</section>
-
-
-
-
-    <h2 style="text-align: center;" id="contacto">CONTACTO</h2>
+    <section id="habilidades" class="fade-in">
+        <h2>Habilidades Tecnicas</h2>
         <div class="divider"></div>
+        <div class="habilidades-container">
+            <span class="habilidad">HTML</span>
+            <span class="habilidad">CSS</span>
+            <span class="habilidad">JavaScript</span>
+            <span class="habilidad">Python</span>
+            <span class="habilidad">Java</span>
+            <span class="habilidad">SQL</span>
+            <span class="habilidad">MySQL</span>
+            <span class="habilidad">PostgreSQL</span>
+            <span class="habilidad">Odoo ERP</span>
+            <span class="habilidad">GitHub</span>
+            <span class="habilidad">Linux</span>
+            <span class="habilidad">Ciberseguridad</span>
+            <span class="habilidad">Salesforce</span>
+            <span class="habilidad">Análisis de datos</span>
+            <span class="habilidad">Gestión de proyectos</span>
+        </div>
+        <h2>Habilidades Blandas</h2>
+        <div class="divider"></div>
+        <div class="habilidades-container">
+            <span class="habilidad">Liderazgo</span>
+            <span class="habilidad">Resolución de problemas</span>
+            <span class="habilidad">Pensamiento crítico</span>
+            <span class="habilidad">Comunicación efectiva</span>
+            <span class="habilidad">Trabajo en equipo</span>
+            <span class="habilidad">Adaptabilidad</span>
+            <span class="habilidad">Orientación al cliente</span>
+            <span class="habilidad">Gestión del tiempo</span>
+            <span class="habilidad">Atención al detalle</span>
+            <span class="habilidad">Aprendizaje continuo</span>
+        </div>
+    </section>
 
-        <p style="text-align: center;">¿Tienes un proyecto en mente? ¡Hablemos! Estoy disponible para nuevas oportunidades</p>
+    <section id="experiencia" class="fade-in">
+        <h2>TRAYECTORIA</h2>
+        <div class="divider"></div>
+        <div class="trayectoria-layout">
 
-        <div style="display: flex;justify-content: space-around;align-content: center;flex-wrap: wrap;align-items: center;gap: 2rem;padding: 5%">
-            <div>
+            <!-- Columna izquierda: Experiencia -->
+            <div class="trayectoria-col">
+                <h3 class="trayectoria-titulo">
+                    <i class="fas fa-briefcase" aria-hidden="true"></i> Experiencia laboral
+                </h3>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <span class="timeline-periodo">Enero 2025 — Presente <span class="timeline-badge">Actual</span></span>
+                        <h4 class="timeline-puesto">Especialista de TI &amp; Coordinador</h4>
+                        <p class="timeline-empresa"><i class="fas fa-building" aria-hidden="true"></i> Delihealth's</p>
+                        <ul class="timeline-lista">
+                            <li>Liderazgo en infraestructura y soporte tecnológico</li>
+                            <li>Implementación personalizada de ERP/CRM</li>
+                            <li>Estrategias de ciberseguridad y prevención interna</li>
+                            <li>Formación del equipo de TI y diseño de políticas tecnológicas</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <span class="timeline-periodo">Oct 2022 — Nov 2024</span>
+                        <h4 class="timeline-puesto">Ingeniero de Sistemas &amp; Consultor</h4>
+                        <p class="timeline-empresa"><i class="fas fa-building" aria-hidden="true"></i> Copiisa Offshore</p>
+                        <ul class="timeline-lista">
+                            <li>Implementación y personalización de Odoo Enterprise</li>
+                            <li>Automatización de procesos y mejora de eficiencia operativa</li>
+                            <li>Instalación de Odoo Community y soporte técnico</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <span class="timeline-periodo">Mar 2022 — Oct 2022</span>
+                        <h4 class="timeline-puesto">Analista de Datos</h4>
+                        <p class="timeline-empresa"><i class="fas fa-building" aria-hidden="true"></i> Estudios de Mercado GDL</p>
+                        <ul class="timeline-lista">
+                            <li>Análisis cuantitativo y cualitativo de datos de mercado</li>
+                            <li>Identificación de tendencias para decisiones estratégicas</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <span class="timeline-periodo">Feb 2020 — Ene 2021</span>
+                        <h4 class="timeline-puesto">Supervisor y Encuestador</h4>
+                        <p class="timeline-empresa"><i class="fas fa-building" aria-hidden="true"></i> INEGI (CPyV y RENEM)</p>
+                        <ul class="timeline-lista">
+                            <li>Supervisión de campo y recolección de información institucional</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Columna derecha: Educación + Certificaciones -->
+            <div class="trayectoria-col">
+                <h3 class="trayectoria-titulo">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i> Educación
+                </h3>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <span class="timeline-periodo">2017 — En curso</span>
+                        <h4 class="timeline-puesto">Ingeniería en Comunicaciones y Electrónica</h4>
+                        <p class="timeline-empresa"><i class="fas fa-university" aria-hidden="true"></i> ESIME — IPN</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <span class="timeline-periodo">2012 — 2017</span>
+                        <h4 class="timeline-puesto">Técnico en Telecomunicaciones</h4>
+                        <p class="timeline-empresa"><i class="fas fa-school" aria-hidden="true"></i> CECYT 11 — IPN</p>
+                    </div>
+
+                </div>
+
+                <h3 class="trayectoria-titulo trayectoria-titulo--gap">
+                    <i class="fas fa-certificate" aria-hidden="true"></i> Certificaciones
+                </h3>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <h4 class="timeline-puesto">Soporte de TI de Google</h4>
+                        <p class="timeline-empresa"><i class="fas fa-building" aria-hidden="true"></i> Google / IYF / CECATI 162</p>
+                        <p class="timeline-desc">Redes, Sistemas Operativos, Infraestructura TI, Ciberseguridad — 186h</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <h4 class="timeline-puesto">Cisco Networking Academy</h4>
+                        <p class="timeline-empresa"><i class="fas fa-building" aria-hidden="true"></i> Cisco</p>
+                        <p class="timeline-desc">IoT, Redes, Introducción a Ciberseguridad — 56h</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <h4 class="timeline-puesto">Escuela de Código: Pilares</h4>
+                        <p class="timeline-empresa"><i class="fas fa-building" aria-hidden="true"></i> Pilares CDMX</p>
+                        <p class="timeline-desc">Desarrollo Web, Python, Bases de datos — 140h</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimonios" class="fade-in">
+        <h2>TESTIMONIOS</h2>
+        <div class="divider"></div>
+        <p class="testimonios-hint">Pasa el cursor sobre una foto para ver el testimonio.</p>
+        <div class="testimonios-container fila-imagenes">
+            <img src="imagenes/gabriela.jpg"
+                 alt="Blanca Gabriela Cuaya Retana"
+                 class="testimonio-imagen"
+                 data-nombre="Blanca Gabriela Cuaya Retana"
+                 data-texto="Tuve la oportunidad de colaborar con Sergio en diferentes proyectos y puedo decir que es un profesional altamente competente, comprometido y con una gran visión estratégica. Su capacidad para ofrecer soluciones en el área de tecnología es efectiva, siempre dispuesto a generar propuestas innovadoras y brindar soporte en todo momento, lo cual ha sido fundamental para el éxito de los proyectos en los que hemos trabajado juntos. Sergio destaca por su liderazgo natural, su habilidad para coordinar equipos multidisciplinarios y su enfoque orientado a resultados. Además, demuestra siempre una excelente comunicación, profesionalismo y disposición para impulsar mejoras continuas en cada proceso. Es un gusto colaborar con él. Lo recomiendo ampliamente por su talento, compromiso y alto sentido de responsabilidad profesional." />
+
+            <img src="imagenes/Emmanuel.jpg"
+                 alt="Jose Emmanuel Hernandez Pérez"
+                 class="testimonio-imagen"
+                 data-nombre="Jose Emmanuel Hernandez Pérez"
+                 data-texto="Recomiendo ampliamente a Sergio Martínez, ya que he tenido la oportunidad de colaborar con él en varias empresas y en todas ha demostrado ser un trabajador muy eficiente que sobrepasa las expectativas. En la parte técnica como programador e ingeniero de sistemas, ha cumplido con todos los retos y objetivos que se le presentan. Por último y no menos importante, es una persona tranquila, cordial y con la mayor disposición a ayudar a los demás." />
+
+            <img src="imagenes/valentin.jpeg"
+                 alt="Francisco Valentin Pichardo Torres"
+                 class="testimonio-imagen"
+                 data-nombre="Francisco Valentin Pichardo Torres"
+                 data-texto="Recomiendo ampliamente a Sergio Martínez, ya que he tenido la oportunidad de colaborar con él en varias empresas y en todas ha demostrado ser un trabajador muy eficiente que sobrepasa las expectativas. En la parte técnica como programador e ingeniero de sistemas, ha cumplido con todos los retos y objetivos que se le presentan. Por último y no menos importante, es una persona tranquila, cordial y con la mayor disposición a ayudar a los demás." />
+
+            <img src="imagenes/paulina.jpeg"
+                 alt="Ingrid Paulina Castillo Pérez"
+                 class="testimonio-imagen"
+                 data-nombre="Ingrid Paulina Castillo Pérez"
+                 data-texto="Recomiendo a Sergio Martínez ampliamente por sus aptitudes en el área tecnológica, su facilidad para aprender y sobre todo por su calidad como persona. Es alguien comprometido con todo lo que hace y una persona resiliente y buen compañero. Es un profesionista que constantemente busca mantenerse actualizado y siempre logra superar las expectativas." />
+
+            <img src="imagenes/jazmin.jpeg"
+                 alt="Jazmin Gomez"
+                 class="testimonio-imagen"
+                 data-nombre="Jazmin Gomez"
+                 data-texto="Recomiendo a Sergio quien es muy profesional y responsable. Sumamente comprometido con entregar resultados y brindar la mejor de las opciones de resolución a las dificultades que se le presenten." />
+
+            <img src="imagenes/yherel.jpeg"
+                 alt="Yherel Mindai Dominguez Dominguez"
+                 class="testimonio-imagen"
+                 data-nombre="Yherel Mindai Dominguez Dominguez"
+                 data-texto="Es muy responsable, se adapta para encontrar soluciones creativas y razonables." />
+        </div>
+
+        <div id="globo-testimonio" class="globo-texto">
+            <p class="globo-nombre">...</p>
+            <p class="globo-mensaje"></p>
+        </div>
+    </section>
+
+    <section id="contacto" class="fade-in">
+        <h2>CONTACTO</h2>
+        <div class="divider"></div>
+        <p class="contacto-intro">¿Tienes un proyecto en mente? ¡Hablemos! Estoy disponible para nuevas oportunidades</p>
+
+        <div class="contacto-layout">
+            <div class="contacto-info">
                 <h3>Información de contacto</h3>
-                <div style="padding: 5px 0;">Email: quetzal.mq97@gmail.com</div>
-                <div style="padding: 5px 0;">Teléfono: 5550538743</div>
-                <div style="padding: 5px 0;">Ubicación: Ciudad de México, CDMX</div>
+                <div class="contacto-dato"><i class="fas fa-envelope" aria-hidden="true"></i> quetzal.mq97@gmail.com</div>
+                <div class="contacto-dato"><i class="fas fa-phone" aria-hidden="true"></i> 5550538743</div>
+                <div class="contacto-dato"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Ciudad de México, CDMX</div>
                 <h3>Sígueme en redes</h3>
-                <div style="display: flex;">
-                    <a href="https://www.google.com/maps/place/Ciudad+de+M%C3%A9xico,+CDMX" target="_blank" class="social-icon">
+                <div class="social-icons-row">
+                    <a href="https://www.google.com/maps/place/Ciudad+de+M%C3%A9xico,+CDMX" target="_blank" rel="noopener" class="social-icon" aria-label="Ver ubicación en Google Maps">
                         <i class="fas fa-map-marker-alt"></i>
                     </a>
-                    <div>
-                        <a href="https://wa.me/525550538743?text=Me%20comunico%20con%20usted%20con%20el%20motivo%20de" target="_blank" class="social-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.linkedin.com/in/sergio-mart%C3%ADnez-8500961b4/" target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="mailto:quetzal.mq97@gmail.com" target="_blank" class="social-icon">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
+                    <a href="https://wa.me/525550538743?text=Me%20comunico%20con%20usted%20con%20el%20motivo%20de" target="_blank" rel="noopener" class="social-icon" aria-label="Contactar por WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sergio-mart%C3%ADnez-8500961b4/" target="_blank" rel="noopener" class="social-icon" aria-label="Perfil de LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:quetzal.mq97@gmail.com" class="social-icon" aria-label="Enviar correo electrónico">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
-            </div>    
-            <div>
-                <section id="contacto" class="contacto-section fade-in">
-                <div class="contacto-card">
-                    <h3>Envíame un mensaje</h3>
+            </div>
 
-                    <form id="contactForm" action="https://formsubmit.co/b3e8b65d1d4be69bd261638d4afc623c" method="POST">
-                    <div class="field" style="display: grid;">
+            <div class="contacto-card">
+                <h3>Envíame un mensaje</h3>
+                <form id="contactForm" action="https://formsubmit.co/b3e8b65d1d4be69bd261638d4afc623c" method="POST">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="field">
                         <label for="nombre">Nombre completo <span class="req">*</span></label>
                         <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
                         <small class="error" data-error-for="nombre"></small>
                     </div>
 
-                    <div class="field" style="display: grid;">
+                    <div class="field">
                         <label for="email">Email <span class="req">*</span></label>
                         <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
                         <small class="error" data-error-for="email"></small>
                     </div>
 
-                    <div class="field" style="display: grid;">
+                    <div class="field">
                         <label for="asunto">Asunto <span class="req">*</span></label>
                         <input type="text" id="asunto" name="asunto" placeholder="¿En qué puedo ayudarte?" required />
                         <small class="error" data-error-for="asunto"></small>
                     </div>
 
-                    <div class="field" style="display: grid;">
+                    <div class="field">
                         <label for="mensaje">Mensaje <span class="req">*</span></label>
                         <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..." maxlength="600" required></textarea>
-                        <div class="meta">
-                        </div>
                         <small class="error" data-error-for="mensaje"></small>
                     </div>
 
@@ -394,16 +487,15 @@
                     </button>
 
                     <p class="success" id="successMsg" aria-live="polite"></p>
-                    </form>
-                </div>
+                </form>
             </div>
-            </section>
-
-            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Mi Portafolio - Todos los derechos reservados</p>
+        <p>&copy; 2025 Mi Portafolio — Todos los derechos reservados</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
